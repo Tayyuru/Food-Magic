@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Payment</title>
+	<link rel="stylesheet" type="text/css" href="payment_style.css">
+	<script>
+		function submitForm() {
+		  var card_no = document.getElementById("pass");
+		  if(card_no.value.length>=2){
+			alert("Payment Successful!!");
+		    window.open("food_menu.html");
+		    return false;
+		}
+		else{
+			alert("Enter card details");
+	    }
+		}
+	  </script>
+</head>
+<body>
+<section class = "banner">
+
+	<div class="container">
+		<div class="left">
+			<h3>BILLING ADDRESS</h3>
+			<form>
+				Full name
+				<input type="text" name="" placeholder="Enter name">
+				Email
+				<input type="text" name="" placeholder="Enter email">
+
+				Address
+				<input type="text" name="" placeholder="Enter address">
+				
+				City
+				<input type="text" name="" placeholder="Enter City">
+				<div id="zip">
+					<label>
+						State
+						<select>
+							<option>Choose State..</option>
+							<option>Rajasthan</option>
+							<option>Hariyana</option>
+							<option>Uttar Pradesh</option>
+							<option>Andhra Pradesh</option>
+							<option>Madhya Pradesh</option>
+						</select>
+					</label>
+						<label>
+						Zip code
+						<input type="number" name="" placeholder="Zip code">
+					</label>
+				</div>
+			</form>
+		</div>
+		<div class="right">
+			<h3>PAYMENT</h3>
+			<form>
+				<br>
+				<input type="text" name="" placeholder="Accepted cards"><br>
+				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXtNGoFbG1pew7DIgCfTeLOolVIKLFm8Jdbehlui_kWW7rYoIvAeRtP7SrERCJfnb5vOU&usqp=CAU" width="150">
+				<img src="https://cdn.xxl.thumbs.canstockphoto.com/credit-card-vector-clipart_csp8154350.jpg" width="100">
+				
+
+				Credit card number
+			<input type="text" name="" placeholder="Enter card number" id = "pass">
+				
+				Exp month
+				<input type="text" name="" placeholder="Enter Month">
+				<div id="zip">
+					<label>
+						Exp year
+						<select>
+							<option>Choose Year..</option>
+							<option>2022</option>
+							<option>2023</option>
+							<option>2024</option>
+							<option>2025</option>
+						</select>
+					</label>
+						<label>
+						CVV
+						<input type="number" name="" placeholder="CVV">
+					</label>
+				</div>
+			</form>
+			<input type="submit" name="" value="Proceed to Pay" onclick="submitForm()">
+		</div>
+	</div>
+
+</section>
+</body>
+</html>
